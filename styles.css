@@ -95,7 +95,9 @@ h2 {
     h1 {
         font-size: 2rem;
     }
-
+    h2 {
+        font-size: 1.6rem;
+    }
     .intro, .details p, .poll p {
         font-size: 0.9rem;
     }
