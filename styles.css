@@ -91,22 +91,21 @@ h2 {
 }
 
 @media (max-width: 768px) {
+@media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
-   h2 {
-    font-size: 1.8rem;
-   }
+
     .intro, .details p, .poll p {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
 
     .cta {
-        font-size: 16px;
+        font-size: 0.9rem;
     }
 
     .content, .details, .poll {
-        padding: 25px;
+        padding: 15px;
     }
     
 }
