@@ -9,10 +9,9 @@
 
 .parallax {
     position: relative;
+    background: url('images/bg.jpeg') no-repeat center center fixed; /* Fallback first */
+    @supports (background-image: url('images/bg.webp')) {
     background: url('images/bg.webp') no-repeat center center fixed;
-    /* Fallback for browsers that don't support WebP */
-    @supports not (background-image: url('images/bg.webp')) {
-    background: url('images/bg.jpeg') no-repeat center center fixed;
     }
     background-size: cover;
     min-height: 100vh;
