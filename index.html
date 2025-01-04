@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Insights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="parallax">
+        <section class="content">
+            <h1>Beauty Comes with a Price: But How Much is it Worth?</h1>
+            <p class="intro">
+                Welcome to an in-depth exploration of the skincare industry. This project compares high-end luxury skincare products with affordable drugstore options to answer a critical question: Are premium prices justified by superior quality, or are we just paying for branding?
+            </p>
+        </section>
+
+        <section class="details">
+            <h2>Discover the Insights</h2>
+            <p>
+                The global skincare market is thriving, projected to grow from $104.24 billion in 2022 to $145.82 billion by 2029. Despite this growth, consumers face a dilemma: choosing between luxury products and affordable alternatives. This project investigates whether high-end products truly offer superior quality or if consumers are simply paying for prestige.
+            </p>
+            <button class="cta">View Interactive Dashboards</button>
+        </section>
+
+        <section class="poll">
+            <h2>Poll:</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrpIzzGhWb_fVTBHIiHRuCYT7TSurWCpqizptjS491q5OO0A/viewform?embedded=true" width="95%" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <p>Skincare doesn’t have to break the bank. By focusing on ingredients rather than marketing, you can achieve similar results with budget-friendly products.</p>
+        <style>
+            .m7w29c {
+    display: none !important;
+}
+        </style>
+        </section>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".content h1", { opacity: 0, y: -50, duration: 1 });
+        gsap.from(".intro", { opacity: 0, x: -50, duration: 1, delay: 0.5 });
+
+        gsap.utils.toArray(".details, .poll").forEach((section) => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%", // Animation starts when the section is 80% into the viewport
+                    toggleActions: "play none none reverse",
+                },
+            });
+        });
+    </script>
+</body>
+</html>
